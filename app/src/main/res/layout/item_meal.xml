@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/btn_meal1"
+    android:layout_margin="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="215dp"
+    android:layout_weight="1"
+    android:background="@drawable/rectangle_for_meal">
+
+    <ImageView
+        android:id="@+id/btn_favourites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:src="@drawable/unselected_fav"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_meal"
+        android:layout_width="99dp"
+        android:layout_height="87dp"
+        android:layout_margin="12dp"
+        android:src="@drawable/photo_meal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/meal_type"
+        style="@style/RegularTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:lineHeight="29sp"
+        android:text="Breakfast"
+        android:textColor="#2958FF"
+        android:textFontWeight="600"
+        android:textSize="9.69sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_meal" />
+
+    <TextView
+        android:id="@+id/meal_name"
+        style="@style/RegularTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Toast with Berries"
+        android:textColor="#FFFFFF"
+        android:textFontWeight="600"
+        android:textSize="9.69sp"
+        app:layout_constraintLeft_toLeftOf="@id/meal_type"
+        app:layout_constraintTop_toBottomOf="@id/meal_type" />
+
+    <ImageView
+        android:id="@+id/img_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/timer"
+        app:layout_constraintLeft_toLeftOf="@id/meal_name"
+        app:layout_constraintTop_toBottomOf="@id/meal_name" />
+
+    <TextView
+        android:id="@+id/tv_timer"
+        style="@style/RegularTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="10:03"
+        android:textColor="@color/colorPrimary"
+        android:textFontWeight="600"
+        android:textSize="9.69sp"
+        app:layout_constraintBottom_toBottomOf="@id/img_timer"
+        app:layout_constraintLeft_toRightOf="@id/img_timer"
+        app:layout_constraintTop_toTopOf="@id/img_timer" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/img_timer"
+        app:layout_constraintTop_toBottomOf="@id/img_timer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

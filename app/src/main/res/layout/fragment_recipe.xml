@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    tools:context=".ui.fragment.recipe.RecipeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="35dp"
+        android:layout_marginTop="38dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/close_drawer"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/notif"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="33dp"
+        android:paddingVertical="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/meal_type"
+                style="@style/RegularTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:lineHeight="29sp"
+                android:text="Breakfast"
+                android:textColor="#2958FF"
+                android:textFontWeight="600"
+                android:textSize="13.1sp"
+                app:layout_constraintLeft_toLeftOf="@id/top_bar"
+                app:layout_constraintTop_toBottomOf="@id/top_bar" />
+
+            <TextView
+                android:id="@+id/meal_name"
+                style="@style/RegularTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Toast with Berries"
+                android:textColor="#FFFFFF"
+                android:textFontWeight="600"
+                android:textSize="21.84sp"
+                app:layout_constraintLeft_toLeftOf="@id/meal_type"
+                app:layout_constraintTop_toBottomOf="@id/meal_type" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="36dp"
+                android:src="@drawable/unselected_fav"
+                app:layout_constraintBottom_toBottomOf="@id/meal_name"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/meal_name" />
+
+            <ImageView
+                android:id="@+id/rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/rate"
+                app:layout_constraintLeft_toLeftOf="@id/meal_name"
+                app:layout_constraintTop_toBottomOf="@id/meal_name" />
+
+            <ImageView
+                android:id="@+id/img_meal"
+                android:layout_width="207dp"
+                android:layout_height="163dp"
+                android:src="@drawable/photo_meal"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rate" />
+
+            <LinearLayout
+                android:id="@+id/description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/img_meal"
+                app:layout_constraintLeft_toLeftOf="@id/rate"
+                app:layout_constraintRight_toLeftOf="@id/img_meal"
+                app:layout_constraintTop_toTopOf="@id/img_meal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/time" />
+
+                    <TextView
+                        android:id="@+id/tv_timer"
+                        style="@style/RegularTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:gravity="center"
+                        android:text="10:03"
+                        android:textColor="#7B7B7B"
+                        android:textFontWeight="600"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="12dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/national" />
+
+                    <TextView
+                        android:id="@+id/tv_national"
+                        style="@style/RegularTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:gravity="center"
+                        android:text="German"
+                        android:textColor="#7B7B7B"
+                        android:textFontWeight="600"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/serving" />
+
+                    <TextView
+                        style="@style/RegularTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:gravity="center"
+                        android:text="! Serving"
+                        android:textColor="#7B7B7B"
+                        android:textFontWeight="600"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_ingradients"
+                style="@style/RegularTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ingradients"
+                android:textColor="#FFFFFF"
+                android:textFontWeight="600"
+                android:textSize="21.84sp"
+                app:layout_constraintLeft_toLeftOf="@id/description"
+                app:layout_constraintTop_toBottomOf="@id/img_meal" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintLeft_toLeftOf="@id/tv_ingradients"
+                app:layout_constraintTop_toBottomOf="@id/tv_ingradients"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_ingredient" />
+
+            <TextView
+                android:id="@+id/tv_instructions"
+                style="@style/RegularTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/instructions"
+                android:textColor="#FFFFFF"
+                android:textFontWeight="600"
+                android:textSize="21.84sp"
+                app:layout_constraintLeft_toLeftOf="@id/rv"
+                app:layout_constraintTop_toBottomOf="@id/rv" />
+
+            <TextView
+                android:id="@+id/tv_instruction_info"
+                style="@style/RegularTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="First make the Hollandaise sauce. Put the lemon juice and vinegar in a small bowl, add the egg yolks and whisk with a balloon whisk until light and frothy. Place the bowl over a pan of simmering water and whisk until mixture thickens. Gradually add the butter, whisking constantly until thick – if it looks like it might be splitting, then whisk off the heat for a few mins. Season and keep warm.\r\n\r\nTo poach the eggs, bring a large pan of water to the boil and add the vinegar. Lower the heat so that the water is simmering gently. Stir the water so you have a slight whirlpool, then slide in the eggs one by one. Cook each for about 4 mins, then remove with a slotted spoon.\r\n\r\nLightly toast and butter the muffins, then put a couple of slices of salmon on each half. Top each with an egg, spoon over some Hollandaise and garnish with chopped chives. Lower the heat so that the water is simmering gently. Stir the water so you have a slight whirlpool, then slide in the eggs one by one. Cook each for about 4 mins, then remove with a slotted spoon.\r\n\r\nLightly toast and butter the muffins, then put a couple of slices of salmon on each half. Top each with an egg, spoon over some Hollandaise and garnish with chopped chives."
+                android:textColor="#7B7B7B"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="@id/tv_instructions"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_instructions" />
+
+            <ImageView
+                android:id="@+id/btn_video"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="24dp"
+                android:src="@drawable/btn_video"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/tv_instruction_info"
+                app:layout_constraintTop_toBottomOf="@id/tv_instruction_info" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
